@@ -2,9 +2,16 @@
 from pathlib import Path
 from html.parser import HTMLParser
 import re
+import json
+import hashlib
 import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
-expected=set('crown shield swords raven scroll castle coins key quill dice'.split())
+catalog=json.loads((ROOT/'catalog.json').read_text())
+expected={i['name'] for i in catalog}
+assert len(catalog)==len(expected)==40
+assert all(re.fullmatch(r'[a-z]+(?:-[a-z]+)*',name) for name in expected)
+for file,digest in json.loads((ROOT/'scripts/pilot-sha256.json').read_text()).items():
+ assert hashlib.sha256((ROOT/file).read_bytes()).hexdigest()==digest, f'Pilot modified: {file}'
 for style in ('outline', 'heraldic'):
  paths=list((ROOT/'icons'/style).glob('*.svg'))
  assert {p.stem for p in paths} == expected
@@ -26,8 +33,14 @@ class Gallery(HTMLParser):
   for attr in ('src','href'):
    if attr in attrs: assert (ROOT/attrs[attr]).is_file(), attrs[attr]
 gallery=Gallery(); gallery.feed((ROOT/'index.html').read_text())
-assert gallery.variants==gallery.downloads==20
+assert gallery.variants==gallery.downloads==80
 assert len(gallery.ids)==len(set(gallery.ids))
 css=ROOT/'css/lannita-icons.css'
 for url in re.findall(r'url\("([^"]*)"\)',css.read_text()): assert (css.parent/url).is_file(),url
-print('OK: 10 pairs, 20 valid SVGs, mask IDs, 20 previews/downloads and local HTML/CSS paths.')
+print('OK: 40 pairs, 80 valid SVGs, mask IDs, 80 previews/downloads and local HTML/CSS paths.')
+
+comparison=Gallery(); comparison.feed((ROOT/'comparison.html').read_text())
+assert comparison.variants==320
+assert len(comparison.ids)==len(set(comparison.ids))
+assert len(re.findall(r'--li-icon:url',css.read_text()))==80
+print('OK: approved pilot baseline verified; comparison includes 320 renders with unique IDs.')

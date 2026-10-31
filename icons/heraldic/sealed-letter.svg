@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<defs><mask id="li-sealed-letter-heraldic-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 14 26 23 26-23M6 52l17-17m35 17L41 35"/><circle cx="32" cy="36" r="7"/><path d="m32 32 3 4-3 4-3-4Z"/></g></mask></defs><g fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-sealed-letter-heraldic-cut)"><path d="M6 14h52v38H6Z"/></g>
+</svg>

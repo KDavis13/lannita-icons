@@ -1,0 +1,202 @@
+[
+  {
+    "name": "crown",
+    "label": "Corona",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "shield",
+    "label": "Escudo",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "swords",
+    "label": "Espadas",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "raven",
+    "label": "Cuervo",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "scroll",
+    "label": "Pergamino",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "castle",
+    "label": "Castillo",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "coins",
+    "label": "Monedas",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "key",
+    "label": "Llave",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "quill",
+    "label": "Pluma",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "dice",
+    "label": "Dados",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "throne",
+    "label": "Trono",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "signet-ring",
+    "label": "Anillo de sello",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "banner",
+    "label": "Estandarte",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "alliance",
+    "label": "Alianza",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "decree",
+    "label": "Decreto",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "scales",
+    "label": "Balanza de justicia",
+    "category": "Nobleza y política"
+  },
+  {
+    "name": "helmet",
+    "label": "Casco medieval",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "spear",
+    "label": "Lanza",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "bow-arrow",
+    "label": "Arco y flecha",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "battle-axe",
+    "label": "Hacha de guerra",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "fortress-gate",
+    "label": "Puertas de fortaleza",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "army",
+    "label": "Ejército",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "sealed-letter",
+    "label": "Carta sellada",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "flying-raven",
+    "label": "Cuervo en vuelo",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "chronicle",
+    "label": "Libro de crónicas",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "hourglass",
+    "label": "Reloj de arena",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "rolled-map",
+    "label": "Mapa enrollado",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "torch",
+    "label": "Antorcha",
+    "category": "Mensajería y narrativa"
+  },
+  {
+    "name": "treasure-chest",
+    "label": "Cofre del tesoro",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "coin-pouch",
+    "label": "Saco de monedas",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "medieval-ship",
+    "label": "Barco medieval",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "village",
+    "label": "Aldea",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "wheat",
+    "label": "Espigas de trigo",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "mountains",
+    "label": "Montañas",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "knight",
+    "label": "Caballero",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "maester",
+    "label": "Maestre",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "hooded-spy",
+    "label": "Espía encapuchado",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "potion",
+    "label": "Poción",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "heart",
+    "label": "Corazón",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "mask",
+    "label": "Máscara",
+    "category": "Personajes y sistemas de rol"
+  }
+]

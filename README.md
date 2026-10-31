@@ -1,8 +1,8 @@
 # Lannita Icons
 
-Colección piloto de 10 símbolos para foros de rol medieval y fantasía, con variantes
-`outline` y `heraldic`: crown, shield, swords, raven, scroll, castle, coins, key,
-quill y dice. Se conserva el catálogo y la geometría del prototipo proporcionado.
+Colección gratuita de 40 símbolos para foros de rol medieval y fantasía, con
+variantes `outline` y `heraldic` (80 SVG). Catálogo completo en `catalog.json`.
+Se conservan los 10 conceptos piloto y se incorporan 30 pares nuevos.
 SVG editables, `viewBox="0 0 64 64"`, color mediante `currentColor`.
 Los recortes heráldicos son transparentes y funcionan sobre cualquier fondo.
 
@@ -47,7 +47,7 @@ Un `<img>` externo no hereda `currentColor` del documento: usa SVG inline o esta
 
 ## Estructura y mantenimiento
 
-- `icons/outline/` y `icons/heraldic/`: los 20 SVG fuente.
+- `icons/outline/` y `icons/heraldic/`: los 80 SVG fuente.
 - `index.html`, `gallery.js`, `css/gallery.css`: galería estática.
 - `css/lannita-icons.css`: integración en foros.
 - `scripts/build.py`: regenera HTML y CSS de iconos con Python 3, sin dependencias.
@@ -86,7 +86,7 @@ inspirada en la referencia de Lannita Codes. Son vectores editables, con fondo
 transparente (salvo el favicon); el logo está preparado para el fondo oscuro de
 la galería. El texto usa tipografía sans serif del sistema sin descargar fuentes.
 Los colores de marca son independientes del selector de color del catálogo.
-Estos archivos de marca no añaden iconos al catálogo piloto.
+Estos archivos de marca no añaden iconos al catálogo.
 
 Para GitHub Pages, publica la raíz del repositorio desde la rama elegida en
 Settings → Pages. `index.html` es el punto de entrada; `.nojekyll` permite servir
@@ -100,3 +100,25 @@ La galería toma como referencia https://lannitacodes.tumblr.com/: fondo carbón
 `#141416`, marfil `#ede7da`, dorado `#b48a3c`, tipografía sans serif, bordes finos
 y llaves ornamentales. Se mantiene un símbolo propio para Icons (L y pluma).
 No se cargan imágenes ni fuentes del Tumblr: los recursos de marca son locales.
+
+## Ampliación gratuita: 40 conceptos / 80 SVG
+
+El catálogo completo se encuentra en `catalog.json`. Se conservan
+los 10 originales: crown, shield, swords, raven, scroll, castle, coins, key,
+quill y dice. Los 30 conceptos nuevos están dibujados con geometría SVG propia,
+sin bibliotecas de iconos ni referencias a escudos de Juego de Tronos.
+
+- Nobleza y política: throne, signet-ring, banner, alliance, decree, scales.
+- Guerra y combate: helmet, spear, bow-arrow, battle-axe, fortress-gate, army.
+- Mensajería y narrativa: sealed-letter, flying-raven, chronicle, hourglass,
+  rolled-map, torch.
+- Economía y territorios: treasure-chest, coin-pouch, medieval-ship, village,
+  wheat, mountains.
+- Personajes y sistemas de rol: knight, maester, hooded-spy, potion, heart, mask.
+
+Abre `comparison.html` para comparar ambos estilos a 16, 24, 32 y 64 px.
+Los detalles ornamentales son secundarios a 16 px; para uso ornamental se
+recomiendan 32 o 64 px. `scripts/check.py` valida también los hashes del piloto,
+los 40 nombres únicos y las 320 muestras con identificadores sin colisiones.
+
+Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a petición del usuario, con pico, cabeza y cola más reconocibles. Se actualizó la referencia de hashes de `raven` para reflejar el cambio autorizado.
