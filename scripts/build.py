@@ -7,10 +7,17 @@ import re
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://kdavis13.github.io/lannita-icons/'
 REPO = 'https://github.com/KDavis13/lannita-icons'
-ICONS = [(i['name'], i['label'], i['category']) for i in json.loads((ROOT/'catalog.json').read_text())]
+CATALOG = json.loads((ROOT/'catalog.json').read_text())
+ICONS = [(i['name'], i['label'], i['category']) for i in CATALOG]
+# Most icons ship two styles; heraldic figures ship only the one that reads best,
+# with a recommended minimum size (catalog fields "styles" and "minSize").
+ICON_STYLES = {i['name']: i.get('styles', ['outline', 'heraldic']) for i in CATALOG}
+MIN_SIZE = {i['name']: i.get('minSize', 16) for i in CATALOG}
+V = sum(len(s) for s in ICON_STYLES.values())
 CORE = set(json.loads((ROOT/'scripts/core-icons.json').read_text()))
 N = len(ICONS)
 STYLES = (('outline', 'Outline'), ('heraldic', 'Heráldico'))
+STYLE_LABEL = dict(STYLES)
 # Categories keep the order in which they first appear in the catalog.
 CATEGORIES = list(dict.fromkeys(c for _, _, c in ICONS))
 
@@ -37,21 +44,23 @@ css = ['/* Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr
        '.li { display:inline-block; width:1em; height:1em; background-color:currentColor; vertical-align:-.125em; -webkit-mask:var(--li-icon) center / contain no-repeat; mask:var(--li-icon) center / contain no-repeat; }']
 for name, label, category in ICONS:
     variants = []
-    for style, style_label in STYLES:
+    single = len(ICON_STYLES[name]) == 1
+    for style in ICON_STYLES[name]:
+        style_label = STYLE_LABEL[style]
         svg = svg_source(name, style).replace('<svg ', '<svg aria-hidden="true" focusable="false" ', 1)
         variants.append(
-            f'<figure class="variant">{svg}<figcaption>{style_label}</figcaption>'
+            f'<figure class="variant">{svg}<figcaption>{style_label if not single else f"Mín. {MIN_SIZE[name]} px"}</figcaption>'
             f'<div class="actions"><button type="button" data-name="{name}" data-style="{style}" aria-label="Copiar HTML de {escape(label)}, {style_label.lower()}">Copiar</button>'
-            f'<button type="button" data-class="{"li li-" + name if style == "outline" else "li li-heraldic li-" + name}" aria-label="Copiar clase CSS de {escape(label)}, {style_label.lower()}">Clase</button>'
+            f'<button type="button" data-class="{"li li-" + name if style == "outline" or single else "li li-heraldic li-" + name}" aria-label="Copiar clase CSS de {escape(label)}, {style_label.lower()}">Clase</button>'
             f'<a href="./icons/{style}/{name}.svg" download="lannita-{name}-{style}.svg" aria-label="Descargar SVG de {escape(label)}, {style_label.lower()}">SVG</a></div></figure>')
-        selector = f'.li-{name}' if style == 'outline' else f'.li-heraldic.li-{name}'
+        selector = f'.li-{name}' if style == 'outline' or single else f'.li-heraldic.li-{name}'
         css.append(f'{selector} {{ --li-icon:url("../icons/{style}/{name}.svg"); }}')
     badge = '' if name in CORE else '<span class="badge">Nuevo</span>'
     search = f'{name} {label.lower()} {category.lower()}'
     cards[category].append(
-        f'<article id="{name}" data-search="{escape(search)}" data-category="{escape(category)}">'
+        f'<article id="{name}" data-search="{escape(search)}" data-category="{escape(category)}" data-variants="{len(ICON_STYLES[name])}">'
         f'<div class="card-head"><h3>{escape(label)}</h3>{badge}<a class="name" href="#{name}"><code>{name}</code></a></div>'
-        f'<div class="pair">{"".join(variants)}</div></article>')
+        f'<div class="pair{" single" if single else ""}">{"".join(variants)}</div></article>')
 
 chips = [f'<button type="button" class="chip" data-category="" aria-pressed="true">Todas <span>{N}</span></button>']
 sections = []
@@ -70,21 +79,22 @@ html = head('Lannita Icons · Colección gratuita', description, '<script src=".
 <div class="toolbar"><div class="controls"><label class="search">Buscar iconos<input id="search" type="search" placeholder="Corona, justa, key…" autocomplete="off"></label>
 <label class="color">Color<input id="color" type="color" value="#b48a3c"></label></div>
 <div class="chips" role="group" aria-label="Filtrar por categoría">{"".join(chips)}</div>
-<p id="count" role="status">{N} iconos · {2*N} variantes</p></div>
+<p id="count" role="status">{N} iconos · {V} variantes</p></div>
 <main id="galeria">{"".join(sections)}<p id="empty" hidden>No hay iconos con estos filtros. Prueba con otra palabra o elige «Todas».</p></main>
 <p id="status" class="toast" role="status" aria-live="polite"></p><dialog id="copy-fallback"><h2>Copia el HTML</h2><p>Selecciona y copia este SVG con Ctrl+C o ⌘C.</p><textarea aria-label="HTML del icono" readonly></textarea><form method="dialog"><button>Cerrar</button></form></dialog>
 {FOOTER}</body></html>'''
 (ROOT/'index.html').write_text(html)
 (ROOT/'css/lannita-icons.css').write_text('\n'.join(css)+'\n')
-print(f'Generated gallery: {N} icons, {2*N} variants; CSS: {2*N} mappings.')
+print(f'Generated gallery: {N} icons, {V} variants; CSS: {V} mappings.')
 
 # ---------------------------------------------------------------- comparison
 rows = {c: [] for c in CATEGORIES}
 for name, label, category in ICONS:
     cells = []
-    for style, style_label in STYLES:
+    for style in ICON_STYLES[name]:
+        style_label = STYLE_LABEL[style] if len(ICON_STYLES[name]) > 1 else f'Mín. {MIN_SIZE[name]} px'
         samples = []
-        for size in (16, 24, 32, 64):
+        for size in ((16, 24, 32, 64) if MIN_SIZE[name] <= 16 else (32, 48, 64, 96)):
             svg = svg_source(name, style)
             # Isolate repeated mask IDs for every size and style in this document.
             for ident in re.findall(r'id="([^"]+)"', svg):
@@ -94,9 +104,9 @@ for name, label, category in ICONS:
         cells.append(f'<div class="samples" aria-label="{style_label}"><span class="style-name">{style_label}</span>{"".join(samples)}</div>')
     rows[category].append(f'<article id="{name}"><div class="card-head"><h3>{escape(label)}</h3><code>{name}</code></div>{"".join(cells)}</article>')
 blocks = ''.join(f'<section class="category"><h2>{escape(c)} <span>{len(rows[c])}</span></h2><div class="compare-grid">{"".join(rows[c])}</div></section>' for c in CATEGORIES)
-comparison = head('Lannita Icons · Comparativa de tamaños', f'Los {2*N} SVG de Lannita Icons a 16, 24, 32 y 64 píxeles.') + f'''
+comparison = head('Lannita Icons · Comparativa de tamaños', f'Los {V} SVG de Lannita Icons a distintos tamaños.') + f'''
 <body class="compare"><header class="page-header"><a class="brand-link" href="./index.html"><img src="./assets/brand/lannita-logo.svg" alt="Lannita Icons" width="460" height="140"></a><a class="back" href="./index.html">← Volver a la galería</a></header>
-<div class="intro"><h1>{N} símbolos, dos estilos.</h1><p>Comparativa de los {2*N} SVG a 16, 24, 32 y 64 píxeles. Los detalles ornamentales se aprecian mejor a partir de 32 px.</p></div>
+<div class="intro"><h1>{N} símbolos, {V} SVG.</h1><p>Comparativa a 16, 24, 32 y 64 píxeles. Las figuras de heráldica tienen una sola versión y se muestran a 32, 48, 64 y 96 píxeles, porque su tamaño mínimo recomendado es 32 px.</p></div>
 <main>{blocks}</main>{FOOTER}</body></html>'''
 (ROOT/'comparison.html').write_text(comparison)
 

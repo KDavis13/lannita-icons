@@ -7,17 +7,17 @@ const normalize = value => value.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowe
 
 function filter() {
   const query = normalize(search.value);
-  let visible = 0;
+  let visible = 0, variants = 0;
   for (const section of sections) {
     let inSection = 0;
     for (const card of section.querySelectorAll('article')) {
       card.hidden = !(normalize(card.dataset.search).includes(query) && (!category || card.dataset.category === category));
-      if (!card.hidden) inSection++;
+      if (!card.hidden) { inSection++; variants += Number(card.dataset.variants || 2); }
     }
     section.hidden = inSection === 0;
     visible += inSection;
   }
-  document.querySelector('#count').textContent = `${visible} ${visible === 1 ? 'icono' : 'iconos'} · ${visible * 2} variantes`;
+  document.querySelector('#count').textContent = `${visible} ${visible === 1 ? 'icono' : 'iconos'} · ${variants} variantes`;
   document.querySelector('#empty').hidden = visible !== 0;
 }
 

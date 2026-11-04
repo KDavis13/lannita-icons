@@ -15,9 +15,13 @@ assert N==len(expected)>=40
 assert all(re.fullmatch(r'[a-z]+(?:-[a-z]+)*',name) for name in expected)
 for file,digest in json.loads((ROOT/'scripts/pilot-sha256.json').read_text()).items():
  assert hashlib.sha256((ROOT/file).read_bytes()).hexdigest()==digest, f'Pilot modified: {file}'
+styles={i['name']: i.get('styles',['outline','heraldic']) for i in catalog}
+assert all(s and set(s)<={'outline','heraldic'} for s in styles.values())
+assert all(len(styles[n])==2 for n in core), 'Core icons keep both styles'
+V=sum(len(s) for s in styles.values())
 for style in ('outline', 'heraldic'):
  paths=list((ROOT/'icons'/style).glob('*.svg'))
- assert {p.stem for p in paths} == expected
+ assert {p.stem for p in paths} == {n for n,s in styles.items() if style in s}, style
  for p in paths:
   assert 'lannitacodes.tumblr.com' in p.read_text(), f'Missing credit comment: {p}'
   svg=ET.fromstring(p.read_text())
@@ -39,15 +43,15 @@ class Gallery(HTMLParser):
    if value and not value.startswith(('#','https://')):
     assert (ROOT/value.split('#')[0]).is_file(), value
 gallery=Gallery(); gallery.feed((ROOT/'index.html').read_text())
-assert gallery.variants==gallery.downloads==2*N
+assert gallery.variants==gallery.downloads==V
 assert len(gallery.ids)==len(set(gallery.ids))
 css=ROOT/'css/lannita-icons.css'
 for url in re.findall(r'url\("([^"]*)"\)',css.read_text()): assert (css.parent/url).is_file(),url
-print(f'OK: {N} pairs (40 core), {2*N} valid SVGs, mask IDs, {2*N} previews/downloads and local HTML/CSS paths.')
+print(f'OK: {N} icons (40 core), {V} valid SVGs, mask IDs, {V} previews/downloads and local HTML/CSS paths.')
 
 comparison=Gallery(); comparison.feed((ROOT/'comparison.html').read_text())
 assert (ROOT/'assets/brand/og-image.png').is_file(), 'Missing social preview image'
-assert comparison.variants==8*N
+assert comparison.variants==4*V
 assert len(comparison.ids)==len(set(comparison.ids))
-assert len(re.findall(r'--li-icon:url',css.read_text()))==2*N
-print(f'OK: approved pilot baseline verified; comparison includes {8*N} renders with unique IDs.')
+assert len(re.findall(r'--li-icon:url',css.read_text()))==V
+print(f'OK: approved pilot baseline verified; comparison includes {4*V} renders with unique IDs.')

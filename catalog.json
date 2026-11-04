@@ -468,5 +468,23 @@
     "name": "merchant",
     "label": "Mercader",
     "category": "Oficios"
+  },
+  {
+    "name": "wolf",
+    "label": "Lobo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
+  },
+  {
+    "name": "lion",
+    "label": "León rampante",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
   }
 ]

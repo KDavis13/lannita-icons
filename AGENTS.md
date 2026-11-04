@@ -39,3 +39,7 @@ Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a pe
   Cada SVG lleva como primer hijo el comentario de crédito
   `<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->`;
   los iconos nuevos deben incluirlo (check.py lo exige). Hashes piloto actualizados por este cambio autorizado.
+
+- Categoría «Heráldica»: figuras genéricas inspiradas en blasones (sin copiar emblemas de casas concretas).
+  Una sola versión por figura (la que mejor funcione, normalmente la sólida en `icons/heraldic/`),
+  declarada en `catalog.json` con `"styles": ["heraldic"]` y `"minSize": 32`. Trazo más fino y más detalle.

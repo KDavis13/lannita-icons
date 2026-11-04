@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->
+<defs><mask id="li-wolf-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><circle cx="54" cy="18" r="1.2" fill="black"/><path d="M56 23h4.5" fill="none" stroke="black" stroke-width="1.1" stroke-linecap="round"/></mask></defs>
+<g fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-wolf-cut)"><g stroke-width="1.4"><path d="M13 27C19 24 30 24 38 24 43 23 46 21 48 19L52 25C50 30 47 34 43 35 34 37 22 37 15 35 11 33 10 29 13 27Z"/><path d="M46 19 48 9 51 14 53 10 55 16 62 21 61 24 54 25 52 28 50 27Z"/><path d="M48 22 50 30 47 29 48 33 45 31 45 35Z"/><path d="M14 27C9 29 5 35 2 43 7 42 12 38 16 33Z"/></g><path d="M44 32 52 41 59 42M41 34 41 45 45 50M18 34 11 42 4 45M23 35 27 45 23 51" fill="none" stroke-width="3.6"/></g>
+</svg>
