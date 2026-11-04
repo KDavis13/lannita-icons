@@ -34,7 +34,9 @@ class Gallery(HTMLParser):
   if 'id' in attrs: self.ids.append(attrs['id'])
   if 'download' in attrs: self.downloads+=1
   for attr in ('src','href'):
-   if attr in attrs: assert (ROOT/attrs[attr]).is_file(), attrs[attr]
+   value=attrs.get(attr)
+   if value and not value.startswith(('#','https://')):
+    assert (ROOT/value.split('#')[0]).is_file(), value
 gallery=Gallery(); gallery.feed((ROOT/'index.html').read_text())
 assert gallery.variants==gallery.downloads==2*N
 assert len(gallery.ids)==len(set(gallery.ids))
@@ -43,6 +45,7 @@ for url in re.findall(r'url\("([^"]*)"\)',css.read_text()): assert (css.parent/u
 print(f'OK: {N} pairs (40 core), {2*N} valid SVGs, mask IDs, {2*N} previews/downloads and local HTML/CSS paths.')
 
 comparison=Gallery(); comparison.feed((ROOT/'comparison.html').read_text())
+assert (ROOT/'assets/brand/og-image.png').is_file(), 'Missing social preview image'
 assert comparison.variants==8*N
 assert len(comparison.ids)==len(set(comparison.ids))
 assert len(re.findall(r'--li-icon:url',css.read_text()))==2*N

@@ -1,19 +1,44 @@
 const search = document.querySelector('#search');
-const category = document.querySelector('#category');
-const cards = [...document.querySelectorAll('article')];
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+const chips = [...document.querySelectorAll('.chip')];
+const sections = [...document.querySelectorAll('section.category')];
+const status = document.querySelector('#status');
+let category = '';
+const normalize = value => value.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+
 function filter() {
+  const query = normalize(search.value);
   let visible = 0;
-  for (const card of cards) {
-    card.hidden = !(normalize(card.dataset.search).includes(normalize(search.value)) && (!category.value || card.dataset.category === category.value));
-    if (!card.hidden) visible++;
+  for (const section of sections) {
+    let inSection = 0;
+    for (const card of section.querySelectorAll('article')) {
+      card.hidden = !(normalize(card.dataset.search).includes(query) && (!category || card.dataset.category === category));
+      if (!card.hidden) inSection++;
+    }
+    section.hidden = inSection === 0;
+    visible += inSection;
   }
-  document.querySelector('#count').textContent = `${visible} ${visible === 1 ? "icono" : "iconos"} · ${visible * 2} variantes`;
+  document.querySelector('#count').textContent = `${visible} ${visible === 1 ? 'icono' : 'iconos'} · ${visible * 2} variantes`;
   document.querySelector('#empty').hidden = visible !== 0;
 }
+
 search.addEventListener('input', filter);
-category.addEventListener('change', filter);
+for (const chip of chips) {
+  chip.addEventListener('click', () => {
+    category = chip.dataset.category;
+    for (const other of chips) other.setAttribute('aria-pressed', String(other === chip));
+    filter();
+  });
+}
 document.querySelector('#color').addEventListener('input', event => document.documentElement.style.setProperty('--icon-color', event.target.value));
+
+let toastTimer;
+function announce(message) {
+  status.textContent = message;
+  status.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => status.classList.remove('show'), 2200);
+}
+
 let copies = 0;
 document.querySelector('main').addEventListener('click', async event => {
   const button = event.target.closest('button[data-name]');
@@ -32,7 +57,7 @@ document.querySelector('main').addEventListener('click', async event => {
   const html = svg.outerHTML;
   try {
     await navigator.clipboard.writeText(html);
-    document.querySelector('#status').textContent = `HTML copiado: ${button.dataset.name} (${button.dataset.style}).`;
+    announce(`HTML copiado: ${button.dataset.name} (${button.dataset.style})`);
   } catch {
     const dialog = document.querySelector('#copy-fallback');
     dialog.querySelector('textarea').value = html;

@@ -1,8 +1,9 @@
 # Lannita Icons
 
-Colección gratuita de 40 símbolos para foros de rol medieval y fantasía, con
-variantes `outline` y `heraldic` (80 SVG). Catálogo completo en `catalog.json`.
-Se conservan los 10 conceptos piloto y se incorporan 30 pares nuevos.
+Colección gratuita de símbolos para foros de rol medieval y fantasía, con
+variantes `outline` y `heraldic`. Catálogo completo en `catalog.json`.
+
+**Galería:** https://kdavis13.github.io/lannita-icons/
 SVG editables, `viewBox="0 0 64 64"`, color mediante `currentColor`.
 Los recortes heráldicos son transparentes y funcionan sobre cualquier fondo.
 
@@ -47,8 +48,10 @@ Un `<img>` externo no hereda `currentColor` del documento: usa SVG inline o esta
 
 ## Estructura y mantenimiento
 
-- `icons/outline/` y `icons/heraldic/`: los 80 SVG fuente.
-- `index.html`, `gallery.js`, `css/gallery.css`: galería estática.
+- `icons/outline/` y `icons/heraldic/`: los SVG fuente.
+- `index.html`, `comparison.html`, `404.html` (generados), `gallery.js`, `css/gallery.css`: web estática.
+- `assets/brand/og-image.png`: vista previa al compartir el enlace; se regenera con
+  `python3 scripts/og_image.py` (opcional, requiere Playwright).
 - `css/lannita-icons.css`: integración en foros.
 - `scripts/build.py`: regenera HTML y CSS de iconos con Python 3, sin dependencias.
 - `scripts/check.py`: comprueba catálogo, SVG, referencias y rutas locales.
@@ -60,12 +63,13 @@ python3 scripts/check.py
 
 ## Publicar en GitHub y jsDelivr
 
-Sube esta estructura a un repositorio público, incluida la licencia, y crea una
-etiqueta de versión, por ejemplo `v0.1.0`. No se ha publicado ningún repositorio.
-La URL prevista para la hoja CSS es (sustituye USUARIO y REPO):
+El repositorio es público en https://github.com/KDavis13/lannita-icons y la
+galería se publica automáticamente en GitHub Pages al subir cambios a `main`.
+Para usar la hoja en un foro, crea una etiqueta de versión (por ejemplo `v0.1.0`)
+y enlaza:
 
 ```text
-https://cdn.jsdelivr.net/gh/USUARIO/REPO@v0.1.0/css/lannita-icons.css
+https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@v0.1.0/css/lannita-icons.css
 ```
 
 Para un SVG: `...@v0.1.0/icons/heraldic/crown.svg`. Mantén la estructura de
@@ -101,7 +105,7 @@ La galería toma como referencia https://lannitacodes.tumblr.com/: fondo carbón
 y llaves ornamentales. Se mantiene un símbolo propio para Icons (L y pluma).
 No se cargan imágenes ni fuentes del Tumblr: los recursos de marca son locales.
 
-## Ampliación gratuita: 40 conceptos / 80 SVG
+## Colección base: 40 conceptos / 80 SVG
 
 El catálogo completo se encuentra en `catalog.json`. Se conservan
 los 10 originales: crown, shield, swords, raven, scroll, castle, coins, key,
@@ -122,3 +126,11 @@ recomiendan 32 o 64 px. `scripts/check.py` valida también los hashes del piloto
 los 40 nombres únicos y las 320 muestras con identificadores sin colisiones.
 
 Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a petición del usuario, con pico, cabeza y cola más reconocibles. Se actualizó la referencia de hashes de `raven` para reflejar el cambio autorizado.
+
+## Ampliación militar
+
+17 pares nuevos en «Guerra y combate»: joust, jouster-right, jouster-left,
+archer, archer-line, arrow-volley, sword-duel, brawl, shield-wall,
+cavalry-charge, siege-ladder, trebuchet, broken-lance, war-camp, guard,
+mercenary y ambush. Los iconos con dos figuras (justa doble, caballería)
+pierden detalle por debajo de 24 px.

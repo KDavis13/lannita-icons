@@ -25,7 +25,11 @@
   de marca fijos y texto con fuentes del sistema en el logo. Mantener la cabecera
   accesible y el favicon enlazado con rutas relativas para GitHub Pages.
 
-- `catalog.json` define nombres, etiquetas y categorías. `comparison.html` es generado.
+- `catalog.json` define nombres, etiquetas y categorías. `comparison.html` y `404.html`
+  son generados. La galería agrupa por categoría en el orden del catálogo y marca como
+  «Nuevo» los iconos fuera de `scripts/core-icons.json`.
+- Al añadir iconos, regenerar también `assets/brand/og-image.png` con `scripts/og_image.py`.
+- La usuaria trabaja directamente en `main`: sin ramas ni pull requests.
 - Validar XML, parejas, nombres, referencias y hashes piloto con `scripts/check.py`.
 
 Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a petición del usuario, con pico, cabeza y cola más reconocibles. Se actualizó la referencia de hashes de `raven` para reflejar el cambio autorizado.
