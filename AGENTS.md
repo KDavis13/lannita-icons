@@ -33,3 +33,6 @@
 - Validar XML, parejas, nombres, referencias y hashes piloto con `scripts/check.py`.
 
 Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a petición del usuario, con pico, cabeza y cola más reconocibles. Se actualizó la referencia de hashes de `raven` para reflejar el cambio autorizado.
+
+- Licencias: iconos y marca CC BY 4.0 con mención obligatoria a Lannita Codes
+  (https://lannitacodes.tumblr.com/); código MIT. Mantener la mención en la web y la guía.

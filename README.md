@@ -78,7 +78,12 @@ que una actualización no cambie el aspecto del foro de forma inesperada.
 
 ## Licencia
 
-MIT; véase `LICENSE`. Los SVG proceden del piloto entregado como diseños originales;
+- **Iconos** (`icons/`, `assets/brand/`, `css/lannita-icons.css`): CC BY 4.0 con
+  **mención obligatoria** a Lannita Codes con enlace a https://lannitacodes.tumblr.com/.
+  Véase `LICENSE-ICONS.md`.
+- **Código** de la web y scripts: MIT. Véase `LICENSE`.
+
+Los SVG proceden del piloto entregado como diseños originales;
 no se ha realizado una auditoría independiente de su autoría.
 
 ## Identidad visual y GitHub Pages
