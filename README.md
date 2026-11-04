@@ -146,3 +146,8 @@ pierden detalle por debajo de 24 px.
   censer, bell, reliquary, holy-sun, moon-cult.
 - Atributos de personaje (13): strength, agility, intellect, wisdom, charisma,
   endurance, perception, stealth, luck, mana, experience, level-up, leadership.
+
+## Lugares · Oficios
+
+- Lugares (6): tavern, dungeon, tower, forest, harbor, crossroads.
+- Oficios (6): blacksmith, innkeeper, hunter, healer, jester, merchant.

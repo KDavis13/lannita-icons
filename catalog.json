@@ -408,5 +408,65 @@
     "name": "level-up",
     "label": "Subir de nivel",
     "category": "Atributos de personaje"
+  },
+  {
+    "name": "tavern",
+    "label": "Taberna",
+    "category": "Lugares"
+  },
+  {
+    "name": "dungeon",
+    "label": "Mazmorra",
+    "category": "Lugares"
+  },
+  {
+    "name": "tower",
+    "label": "Torre",
+    "category": "Lugares"
+  },
+  {
+    "name": "forest",
+    "label": "Bosque",
+    "category": "Lugares"
+  },
+  {
+    "name": "harbor",
+    "label": "Puerto",
+    "category": "Lugares"
+  },
+  {
+    "name": "crossroads",
+    "label": "Cruce de caminos",
+    "category": "Lugares"
+  },
+  {
+    "name": "blacksmith",
+    "label": "Herrero",
+    "category": "Oficios"
+  },
+  {
+    "name": "innkeeper",
+    "label": "Posadero",
+    "category": "Oficios"
+  },
+  {
+    "name": "hunter",
+    "label": "Cazador",
+    "category": "Oficios"
+  },
+  {
+    "name": "healer",
+    "label": "Sanador",
+    "category": "Oficios"
+  },
+  {
+    "name": "jester",
+    "label": "Juglar",
+    "category": "Oficios"
+  },
+  {
+    "name": "merchant",
+    "label": "Mercader",
+    "category": "Oficios"
   }
 ]
