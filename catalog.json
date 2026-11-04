@@ -213,5 +213,60 @@
     "name": "shield-wall",
     "label": "Muro de escudos",
     "category": "Guerra y combate"
+  },
+  {
+    "name": "jouster-right",
+    "label": "Justador (derecha)",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "jouster-left",
+    "label": "Justador (izquierda)",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "sword-duel",
+    "label": "Duelo de espadas",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "brawl",
+    "label": "Pelea a puñetazos",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "siege-ladder",
+    "label": "Asalto con escalas",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "arrow-volley",
+    "label": "Lluvia de flechas",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "broken-lance",
+    "label": "Lanza rota de torneo",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "cavalry-charge",
+    "label": "Carga de caballería",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "archer-line",
+    "label": "Arqueros en fila",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "trebuchet",
+    "label": "Trebuchet",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "war-camp",
+    "label": "Campamento militar",
+    "category": "Guerra y combate"
   }
 ]
