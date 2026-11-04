@@ -1,6 +1,8 @@
 # Convenciones de Lannita Icons
 
-- Mantener los 40 conceptos autorizados y sus dos variantes. Conservar los 10 pares piloto.
+- Conservar los 40 conceptos base (listados en `scripts/core-icons.json`) y los 10 pares
+  piloto. El catálogo puede ampliarse con nuevos pares a petición del usuario; el
+  proyecto es gratuito y sin monetización.
 - Cada nombre debe existir en `icons/outline/` y `icons/heraldic/`; nombres ingleses
   en minúsculas, separados por guiones cuando sea necesario.
 - Mantener `viewBox="0 0 64 64"`, proporciones y significado coherentes entre estilos.
@@ -19,7 +21,7 @@
 - Documentar cambios, pruebas y límites reales; no publicar sin petición del usuario.
 
 - Identidad visual en `assets/brand/`: logo horizontal, símbolo y favicon. Son
-  recursos de marca separados del catálogo de 40 pares. Se permiten los colores
+  recursos de marca separados del catálogo de iconos. Se permiten los colores
   de marca fijos y texto con fuentes del sistema en el logo. Mantener la cabecera
   accesible y el favicon enlazado con rutas relativas para GitHub Pages.
 
