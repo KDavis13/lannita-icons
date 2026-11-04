@@ -283,5 +283,125 @@
     "name": "ambush",
     "label": "Emboscada",
     "category": "Guerra y combate"
+  },
+  {
+    "name": "chapel",
+    "label": "Capilla",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "altar",
+    "label": "Altar",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "chalice",
+    "label": "Cáliz",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "holy-book",
+    "label": "Libro sagrado",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "candles",
+    "label": "Velas",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "prayer",
+    "label": "Oración",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "priest",
+    "label": "Sacerdote",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "censer",
+    "label": "Incensario",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "bell",
+    "label": "Campana",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "reliquary",
+    "label": "Relicario",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "holy-sun",
+    "label": "Sol sagrado",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "moon-cult",
+    "label": "Culto lunar",
+    "category": "Religión y fe"
+  },
+  {
+    "name": "strength",
+    "label": "Fuerza",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "agility",
+    "label": "Agilidad",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "intellect",
+    "label": "Inteligencia",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "wisdom",
+    "label": "Sabiduría",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "charisma",
+    "label": "Carisma",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "endurance",
+    "label": "Resistencia",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "perception",
+    "label": "Percepción",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "stealth",
+    "label": "Sigilo",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "luck",
+    "label": "Suerte",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "mana",
+    "label": "Maná",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "experience",
+    "label": "Experiencia",
+    "category": "Atributos de personaje"
+  },
+  {
+    "name": "level-up",
+    "label": "Subir de nivel",
+    "category": "Atributos de personaje"
   }
 ]
