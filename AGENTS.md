@@ -25,7 +25,7 @@
   de marca fijos y texto con fuentes del sistema en el logo. Mantener la cabecera
   accesible y el favicon enlazado con rutas relativas para GitHub Pages.
 
-- `catalog.json` define nombres, etiquetas y categorías. `comparison.html` y `404.html`
+- `catalog.json` define nombres, etiquetas y categorías. `comparison.html`, `guia.html` y `404.html`
   son generados. La galería agrupa por categoría en el orden del catálogo y marca como
   «Nuevo» los iconos fuera de `scripts/core-icons.json`.
 - Al añadir iconos, regenerar también `assets/brand/og-image.png` con `scripts/og_image.py`.

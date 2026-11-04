@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lannita Icons · Cómo usarlos</title><meta name="description" content="Guía para usar los iconos de Lannita Icons en Foroactivo y otras webs."><meta name="theme-color" content="#141416">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Lannita Icons"><meta property="og:title" content="Lannita Icons · Cómo usarlos"><meta property="og:description" content="Guía para usar los iconos de Lannita Icons en Foroactivo y otras webs."><meta property="og:image" content="https://kdavis13.github.io/lannita-icons/assets/brand/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"><link rel="stylesheet" href="./css/gallery.css"><link rel="stylesheet" href="./css/lannita-icons.css"></head>
+<body class="guide"><header class="page-header"><a class="brand-link" href="./index.html"><img src="./assets/brand/lannita-logo.svg" alt="Lannita Icons" width="460" height="140"></a><a class="back" href="./index.html">← Volver a la galería</a></header>
+<div class="intro"><h1>Cómo usar los iconos</h1><p>Tres formas de llevarlos a tu foro. Elige según lo que te permita tu plantilla.</p>
+<p class="demo" style="color:#b48a3c"><span class="li li-crown" aria-hidden="true"></span><span class="li li-heraldic li-swords" aria-hidden="true"></span><span class="li li-raven" aria-hidden="true"></span><span class="li li-heraldic li-castle" aria-hidden="true"></span><span class="li li-jouster-right" aria-hidden="true"></span><span class="li li-heraldic li-potion" aria-hidden="true"></span></p></div>
+<nav class="toc" aria-label="En esta guía"><a href="#clases">1. Clases CSS (recomendado)</a><a href="#svg">2. Copiar el SVG</a><a href="#descargar">3. Descargar el archivo</a><a href="#consejos">Consejos</a></nav>
+<main>
+<section id="clases" class="step"><h2><span>1</span> Clases CSS <em>Recomendado para Foroactivo</em></h2>
+<p>Cargas una sola hoja de estilos y después escribes los iconos con una etiqueta corta. Toman el color del texto que los rodea, así que combinan con cualquier tema.</p>
+<h3>Paso 1 · Carga la hoja una vez</h3>
+<p>Pega esta línea <strong>al principio</strong> de la hoja CSS de tu foro (en Foroactivo, en el panel de administración, dentro de Visualización, en la hoja de estilo CSS):</p>
+<pre><code>@import url(&quot;https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@main/css/lannita-icons.css&quot;);</code></pre>
+<p>Si tu plantilla admite etiquetas en el <code>&lt;head&gt;</code>, también puedes usar:</p>
+<pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@main/css/lannita-icons.css&quot;&gt;</code></pre>
+<h3>Paso 2 · Escribe el icono</h3>
+<p>En la galería, pulsa <strong>Clase</strong> en el icono que quieras y pégalo donde se acepte HTML:</p>
+<pre><code>&lt;span class=&quot;li li-crown&quot;&gt;&lt;/span&gt; Administración
+&lt;span class=&quot;li li-heraldic li-crown&quot;&gt;&lt;/span&gt; Nobleza</code></pre>
+<p class="example"><span class="li li-crown" aria-hidden="true"></span> Administración &nbsp;·&nbsp; <span class="li li-heraldic li-crown" aria-hidden="true"></span> Nobleza</p>
+<h3>Paso 3 · Ajusta color y tamaño</h3>
+<p>El icono mide lo mismo que el texto (<code>1em</code>) y usa su color. Cámbialos con CSS:</p>
+<pre><code>.li { color: #b48a3c; font-size: 24px; }
+.titulo .li { font-size: 2em; }</code></pre>
+</section>
+<section id="svg" class="step"><h2><span>2</span> Copiar el SVG</h2>
+<p>Pulsa <strong>Copiar</strong> en la galería y pega el código directamente en tu plantilla o mensaje. No necesita ninguna hoja externa y también toma el color del texto. Es útil para un icono suelto o si tu foro no deja importar CSS.</p>
+<pre><code>&lt;svg … width=&quot;1em&quot; height=&quot;1em&quot; viewBox=&quot;0 0 64 64&quot;&gt;…&lt;/svg&gt;</code></pre>
+<p>Algunos editores de mensajes eliminan las etiquetas <code>&lt;svg&gt;</code>; en ese caso, usa las clases CSS en plantillas.</p></section>
+<section id="descargar" class="step"><h2><span>3</span> Descargar el archivo</h2>
+<p>Pulsa <strong>SVG</strong> para guardar el archivo. Puedes editarlo (Inkscape, Illustrator, Figma) o subirlo como imagen. Como imagen (<code>&lt;img&gt;</code>) mantiene el color dorado por defecto y no cambia con tu tema; para colores personalizados, ábrelo y cambia <code>currentColor</code> por el color que quieras.</p></section>
+<section id="consejos" class="step"><h2>Consejos</h2><ul>
+<li><strong>Accesibilidad.</strong> Acompaña el icono de texto visible. Si va solo y significa algo, añade una etiqueta: <code>&lt;span class="li li-key" role="img" aria-label="Llave"&gt;&lt;/span&gt;</code>.</li>
+<li><strong>Tamaño.</strong> Los iconos se leen bien desde 24 px; los ornamentales y los de dos figuras lucen más a 32 px o más.</li>
+<li><strong>Versión fija.</strong> El enlace con <code>@main</code> siempre trae la última versión. Si prefieres que tu foro no cambie nunca, pídenos una versión etiquetada.</li>
+<li><strong>Licencia.</strong> Gratis para cualquier foro o proyecto, también comercial (MIT). Se agradece mencionar a Lannita Codes, pero no es obligatorio.</li>
+</ul></section>
+</main><footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de Lannita Codes. Licencia MIT.</p></div>
+<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a><a href="https://github.com/KDavis13/lannita-icons">Código en GitHub</a></nav></footer></body></html>

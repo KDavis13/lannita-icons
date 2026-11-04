@@ -41,6 +41,17 @@ function announce(message) {
 
 let copies = 0;
 document.querySelector('main').addEventListener('click', async event => {
+  const classButton = event.target.closest('button[data-class]');
+  if (classButton) {
+    const snippet = `<span class="${classButton.dataset.class}"></span>`;
+    try {
+      await navigator.clipboard.writeText(snippet);
+      announce(`Clase copiada: ${classButton.dataset.class}`);
+    } catch {
+      showFallback(snippet);
+    }
+    return;
+  }
   const button = event.target.closest('button[data-name]');
   if (!button) return;
   const svg = button.closest('.variant').querySelector('svg').cloneNode(true);
@@ -59,8 +70,12 @@ document.querySelector('main').addEventListener('click', async event => {
     await navigator.clipboard.writeText(html);
     announce(`HTML copiado: ${button.dataset.name} (${button.dataset.style})`);
   } catch {
-    const dialog = document.querySelector('#copy-fallback');
-    dialog.querySelector('textarea').value = html;
-    dialog.showModal(); dialog.querySelector('textarea').select();
+    showFallback(html);
   }
 });
+
+function showFallback(text) {
+  const dialog = document.querySelector('#copy-fallback');
+  dialog.querySelector('textarea').value = text;
+  dialog.showModal(); dialog.querySelector('textarea').select();
+}

@@ -49,7 +49,7 @@ Un `<img>` externo no hereda `currentColor` del documento: usa SVG inline o esta
 ## Estructura y mantenimiento
 
 - `icons/outline/` y `icons/heraldic/`: los SVG fuente.
-- `index.html`, `comparison.html`, `404.html` (generados), `gallery.js`, `css/gallery.css`: web estática.
+- `index.html`, `guia.html`, `comparison.html`, `404.html` (generados), `gallery.js`, `css/gallery.css`: web estática.
 - `assets/brand/og-image.png`: vista previa al compartir el enlace; se regenera con
   `python3 scripts/og_image.py` (opcional, requiere Playwright).
 - `css/lannita-icons.css`: integración en foros.

@@ -28,7 +28,7 @@ def head(title, description, extra=''):
 
 
 FOOTER = f'''<footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de Lannita Codes. Licencia MIT.</p></div>
-<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./comparison.html">Comparativa de tamaños</a><a href="{REPO}#readme">Guía de uso y Foroactivo</a><a href="{REPO}">Código en GitHub</a></nav></footer>'''
+<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a><a href="{REPO}">Código en GitHub</a></nav></footer>'''
 
 # ---------------------------------------------------------------- gallery
 cards = {c: [] for c in CATEGORIES}
@@ -41,6 +41,7 @@ for name, label, category in ICONS:
         variants.append(
             f'<figure class="variant">{svg}<figcaption>{style_label}</figcaption>'
             f'<div class="actions"><button type="button" data-name="{name}" data-style="{style}" aria-label="Copiar HTML de {escape(label)}, {style_label.lower()}">Copiar</button>'
+            f'<button type="button" data-class="{"li li-" + name if style == "outline" else "li li-heraldic li-" + name}" aria-label="Copiar clase CSS de {escape(label)}, {style_label.lower()}">Clase</button>'
             f'<a href="./icons/{style}/{name}.svg" download="lannita-{name}-{style}.svg" aria-label="Descargar SVG de {escape(label)}, {style_label.lower()}">SVG</a></div></figure>')
         selector = f'.li-{name}' if style == 'outline' else f'.li-heraldic.li-{name}'
         css.append(f'{selector} {{ --li-icon:url("../icons/{style}/{name}.svg"); }}')
@@ -64,7 +65,7 @@ html = head('Lannita Icons · Colección gratuita', description, '<script src=".
 <body><a class="skip" href="#galeria">Ir a la galería</a>
 <header class="site-header"><p class="eyebrow">LANNITA CODES / RECURSOS GRATUITOS</p><h1 class="brand"><img src="./assets/brand/lannita-logo.svg" alt="Lannita Icons" width="460" height="140"></h1>
 <div class="hero"><h2 class="hero-title">Pequeños símbolos.<br>Grandes historias.</h2><p>Iconos SVG para tus comunidades de rol medieval y fantasía. Editables, personalizables y listos para dar vida a tu foro.</p>
-<ul class="collection-meta"><li>{N} ICONOS</li><li>2 ESTILOS</li><li>{len(CATEGORIES)} CATEGORÍAS</li><li>GRATIS Y OPEN SOURCE</li></ul></div></header>
+<p class="hero-links"><a class="button" href="./guia.html">Cómo usarlos en tu foro</a><a href="./comparison.html">Ver tamaños</a></p><ul class="collection-meta"><li>{N} ICONOS</li><li>2 ESTILOS</li><li>{len(CATEGORIES)} CATEGORÍAS</li><li>GRATIS Y OPEN SOURCE</li></ul></div></header>
 <div class="toolbar"><div class="controls"><label class="search">Buscar iconos<input id="search" type="search" placeholder="Corona, justa, key…" autocomplete="off"></label>
 <label class="color">Color<input id="color" type="color" value="#b48a3c"></label></div>
 <div class="chips" role="group" aria-label="Filtrar por categoría">{"".join(chips)}</div>
@@ -97,6 +98,47 @@ comparison = head('Lannita Icons · Comparativa de tamaños', f'Los {2*N} SVG de
 <div class="intro"><h1>{N} símbolos, dos estilos.</h1><p>Comparativa de los {2*N} SVG a 16, 24, 32 y 64 píxeles. Los detalles ornamentales se aprecian mejor a partir de 32 px.</p></div>
 <main>{blocks}</main>{FOOTER}</body></html>'''
 (ROOT/'comparison.html').write_text(comparison)
+
+# ---------------------------------------------------------------- guide
+CDN = 'https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@main/css/lannita-icons.css'
+def code(text):
+    return f'<pre><code>{escape(text)}</code></pre>'
+demo = ''.join(f'<span class="li {"li-heraldic " if k % 2 else ""}li-{n}" aria-hidden="true"></span>' for k, n in enumerate(['crown', 'swords', 'raven', 'castle', 'jouster-right', 'potion']))
+guide = head('Lannita Icons · Cómo usarlos', 'Guía para usar los iconos de Lannita Icons en Foroactivo y otras webs.', '<link rel="stylesheet" href="./css/lannita-icons.css">') + f'''
+<body class="guide"><header class="page-header"><a class="brand-link" href="./index.html"><img src="./assets/brand/lannita-logo.svg" alt="Lannita Icons" width="460" height="140"></a><a class="back" href="./index.html">← Volver a la galería</a></header>
+<div class="intro"><h1>Cómo usar los iconos</h1><p>Tres formas de llevarlos a tu foro. Elige según lo que te permita tu plantilla.</p>
+<p class="demo" style="color:#b48a3c">{demo}</p></div>
+<nav class="toc" aria-label="En esta guía"><a href="#clases">1. Clases CSS (recomendado)</a><a href="#svg">2. Copiar el SVG</a><a href="#descargar">3. Descargar el archivo</a><a href="#consejos">Consejos</a></nav>
+<main>
+<section id="clases" class="step"><h2><span>1</span> Clases CSS <em>Recomendado para Foroactivo</em></h2>
+<p>Cargas una sola hoja de estilos y después escribes los iconos con una etiqueta corta. Toman el color del texto que los rodea, así que combinan con cualquier tema.</p>
+<h3>Paso 1 · Carga la hoja una vez</h3>
+<p>Pega esta línea <strong>al principio</strong> de la hoja CSS de tu foro (en Foroactivo, en el panel de administración, dentro de Visualización, en la hoja de estilo CSS):</p>
+{code(f'@import url("{CDN}");')}
+<p>Si tu plantilla admite etiquetas en el <code>&lt;head&gt;</code>, también puedes usar:</p>
+{code(f'<link rel="stylesheet" href="{CDN}">')}
+<h3>Paso 2 · Escribe el icono</h3>
+<p>En la galería, pulsa <strong>Clase</strong> en el icono que quieras y pégalo donde se acepte HTML:</p>
+{code('<span class="li li-crown"></span> Administración' + chr(10) + '<span class="li li-heraldic li-crown"></span> Nobleza')}
+<p class="example"><span class="li li-crown" aria-hidden="true"></span> Administración &nbsp;·&nbsp; <span class="li li-heraldic li-crown" aria-hidden="true"></span> Nobleza</p>
+<h3>Paso 3 · Ajusta color y tamaño</h3>
+<p>El icono mide lo mismo que el texto (<code>1em</code>) y usa su color. Cámbialos con CSS:</p>
+{code('.li { color: #b48a3c; font-size: 24px; }' + chr(10) + '.titulo .li { font-size: 2em; }')}
+</section>
+<section id="svg" class="step"><h2><span>2</span> Copiar el SVG</h2>
+<p>Pulsa <strong>Copiar</strong> en la galería y pega el código directamente en tu plantilla o mensaje. No necesita ninguna hoja externa y también toma el color del texto. Es útil para un icono suelto o si tu foro no deja importar CSS.</p>
+{code('<svg … width="1em" height="1em" viewBox="0 0 64 64">…</svg>')}
+<p>Algunos editores de mensajes eliminan las etiquetas <code>&lt;svg&gt;</code>; en ese caso, usa las clases CSS en plantillas.</p></section>
+<section id="descargar" class="step"><h2><span>3</span> Descargar el archivo</h2>
+<p>Pulsa <strong>SVG</strong> para guardar el archivo. Puedes editarlo (Inkscape, Illustrator, Figma) o subirlo como imagen. Como imagen (<code>&lt;img&gt;</code>) mantiene el color dorado por defecto y no cambia con tu tema; para colores personalizados, ábrelo y cambia <code>currentColor</code> por el color que quieras.</p></section>
+<section id="consejos" class="step"><h2>Consejos</h2><ul>
+<li><strong>Accesibilidad.</strong> Acompaña el icono de texto visible. Si va solo y significa algo, añade una etiqueta: <code>&lt;span class="li li-key" role="img" aria-label="Llave"&gt;&lt;/span&gt;</code>.</li>
+<li><strong>Tamaño.</strong> Los iconos se leen bien desde 24 px; los ornamentales y los de dos figuras lucen más a 32 px o más.</li>
+<li><strong>Versión fija.</strong> El enlace con <code>@main</code> siempre trae la última versión. Si prefieres que tu foro no cambie nunca, pídenos una versión etiquetada.</li>
+<li><strong>Licencia.</strong> Gratis para cualquier foro o proyecto, también comercial (MIT). Se agradece mencionar a Lannita Codes, pero no es obligatorio.</li>
+</ul></section>
+</main>{FOOTER}</body></html>'''
+(ROOT/'guia.html').write_text(guide)
 
 # ---------------------------------------------------------------- 404
 page404 = head('Lannita Icons · Página no encontrada', 'Esta página no existe.') + f'''
