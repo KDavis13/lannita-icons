@@ -19,6 +19,7 @@ for style in ('outline', 'heraldic'):
  paths=list((ROOT/'icons'/style).glob('*.svg'))
  assert {p.stem for p in paths} == expected
  for p in paths:
+  assert 'lannitacodes.tumblr.com' in p.read_text(), f'Missing credit comment: {p}'
   svg=ET.fromstring(p.read_text())
   assert svg.get('viewBox') == '0 0 64 64', p
   ids={el.get('id') for el in svg.iter() if el.get('id')}

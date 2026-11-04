@@ -1,3 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->
 <defs><mask id="li-potion-heraldic-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 39h28"/><path d="m32 42 5 6-5 6-5-6Z"/></g></mask></defs><g fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-potion-heraldic-cut)"><path d="M25 5h14v8H25ZM26 13h12v14c25 14 20 33-6 33S1 41 26 27Z"/></g>
 </svg>

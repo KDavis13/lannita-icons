@@ -1,3 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->
 <defs><mask id="li-treasure-chest-heraldic-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 13v44m30-44v44M7 37h50"/><path d="M28 26h8v18h-8Z"/></g></mask></defs><g fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-treasure-chest-heraldic-cut)"><path d="M7 29v-8C7 4 57 4 57 21v8ZM7 29h50v28H7Z"/></g>
 </svg>

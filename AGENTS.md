@@ -36,3 +36,6 @@ Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a pe
 
 - Licencias: iconos y marca CC BY 4.0 con mención obligatoria a Lannita Codes
   (https://lannitacodes.tumblr.com/); código MIT. Mantener la mención en la web y la guía.
+  Cada SVG lleva como primer hijo el comentario de crédito
+  `<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->`;
+  los iconos nuevos deben incluirlo (check.py lo exige). Hashes piloto actualizados por este cambio autorizado.

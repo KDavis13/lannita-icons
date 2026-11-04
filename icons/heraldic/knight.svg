@@ -1,3 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->
 <defs><mask id="li-knight-heraldic-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21h22M32 21v13M19 43l-3 15m29-15 3 15"/><path d="m32 47 5 5-5 6-5-6Z"/></g></mask></defs><g fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-knight-heraldic-cut)"><path d="M21 30V16c0-16 22-16 22 0v14l-11 8ZM6 58V45l15-8 11 7 11-7 15 8v13Z"/></g>
 </svg>

@@ -1,3 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+<!-- Lannita Icons · Iconos de Lannita Codes (https://lannitacodes.tumblr.com/) · CC BY 4.0, mención obligatoria -->
 <defs><mask id="li-helmet-heraldic-cut" maskUnits="userSpaceOnUse" x="0" y="0" width="64" height="64" style="mask-type:luminance"><rect width="64" height="64" fill="white"/><g fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 30h40M32 30v30M20 38h5m14 0h5M20 45h5m14 0h5"/><path d="M31 12h2v10h-2Z"/></g></mask></defs><g fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" mask="url(#li-helmet-heraldic-cut)"><path d="M12 51V26a20 20 0 0 1 40 0v25L32 60Z"/></g>
 </svg>
