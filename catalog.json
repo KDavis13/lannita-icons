@@ -268,5 +268,20 @@
     "name": "war-camp",
     "label": "Campamento militar",
     "category": "Guerra y combate"
+  },
+  {
+    "name": "guard",
+    "label": "Guardia",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "mercenary",
+    "label": "Mercenario",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "ambush",
+    "label": "Emboscada",
+    "category": "Guerra y combate"
   }
 ]
