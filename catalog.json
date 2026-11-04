@@ -198,5 +198,20 @@
     "name": "mask",
     "label": "Máscara",
     "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "joust",
+    "label": "Justa",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "archer",
+    "label": "Arquero",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "shield-wall",
+    "label": "Muro de escudos",
+    "category": "Guerra y combate"
   }
 ]
