@@ -144,5 +144,5 @@ pierden detalle por debajo de 24 px.
 
 - Religión y fe (12): chapel, altar, chalice, holy-book, candles, prayer, priest,
   censer, bell, reliquary, holy-sun, moon-cult.
-- Atributos de personaje (12): strength, agility, intellect, wisdom, charisma,
-  endurance, perception, stealth, luck, mana, experience, level-up.
+- Atributos de personaje (13): strength, agility, intellect, wisdom, charisma,
+  endurance, perception, stealth, luck, mana, experience, level-up, leadership.

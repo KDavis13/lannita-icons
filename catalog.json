@@ -370,6 +370,11 @@
     "category": "Atributos de personaje"
   },
   {
+    "name": "leadership",
+    "label": "Liderazgo",
+    "category": "Atributos de personaje"
+  },
+  {
     "name": "endurance",
     "label": "Resistencia",
     "category": "Atributos de personaje"
