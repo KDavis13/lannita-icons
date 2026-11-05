@@ -13,6 +13,7 @@ ICONS = [(i['name'], i['label'], i['category']) for i in CATALOG]
 # with a recommended minimum size (catalog fields "styles" and "minSize").
 ICON_STYLES = {i['name']: i.get('styles', ['outline', 'heraldic']) for i in CATALOG}
 MIN_SIZE = {i['name']: i.get('minSize', 16) for i in CATALOG}
+CREDIT = {i['name']: i['credit'] for i in CATALOG if 'credit' in i}
 V = sum(len(s) for s in ICON_STYLES.values())
 CORE = set(json.loads((ROOT/'scripts/core-icons.json').read_text()))
 N = len(ICONS)
@@ -60,7 +61,9 @@ for name, label, category in ICONS:
     cards[category].append(
         f'<article id="{name}" data-search="{escape(search)}" data-category="{escape(category)}" data-variants="{len(ICON_STYLES[name])}">'
         f'<div class="card-head"><h3>{escape(label)}</h3>{badge}<a class="name" href="#{name}"><code>{name}</code></a></div>'
-        f'<div class="pair{" single" if single else ""}">{"".join(variants)}</div></article>')
+        f'<div class="pair{" single" if single else ""}">{"".join(variants)}</div>'
+        + (f'<p class="card-credit">Basado en <a href="{CREDIT[name]["url"]}">«{CREDIT[name]["title"]}»</a> de {escape(CREDIT[name]["author"])} · {CREDIT[name]["license"]}</p>' if name in CREDIT else '')
+        + '</article>')
 
 chips = [f'<button type="button" class="chip" data-category="" aria-pressed="true">Todas <span>{N}</span></button>']
 sections = []
@@ -146,6 +149,7 @@ guide = head('Lannita Icons · Cómo usarlos', 'Guía para usar los iconos de La
 <p>Los iconos son gratis para cualquier foro o proyecto, pero <strong>es obligatorio mencionar a Lannita Codes</strong> con un enlace a su Tumblr. Pon la mención en un lugar visible, como el pie del foro o una página de créditos:</p>
 {code('Iconos de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a>')}
 <p class="example">Iconos de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a></p>
+<p>Los iconos de <strong>Heráldica</strong> son adaptaciones de figuras de <a href="https://game-icons.net/">game-icons.net</a> (CC BY 3.0). Si usas alguno, menciona también a su autor original, que aparece en su tarjeta de la galería; por ejemplo: <code>León de Lorc (game-icons.net)</code>.</p>
 <p>Si modificas los iconos, indica que los has cambiado. Licencia: <a href="https://creativecommons.org/licenses/by/4.0/deed.es">Creative Commons Atribución 4.0 (CC BY 4.0)</a>.</p></section>
 <section id="consejos" class="step"><h2>Consejos</h2><ul>
 <li><strong>Accesibilidad.</strong> Acompaña el icono de texto visible. Si va solo y significa algo, añade una etiqueta: <code>&lt;span class="li li-key" role="img" aria-label="Llave"&gt;&lt;/span&gt;</code>.</li>

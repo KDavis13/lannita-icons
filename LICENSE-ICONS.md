@@ -21,3 +21,15 @@ Si modificas los iconos, indica que los has cambiado.
 
 Las versiones publicadas antes del 4 de noviembre de 2026 se distribuyeron bajo
 licencia MIT. Quien las obtuvo entonces conserva esos permisos para esas copias.
+
+## Iconos de terceros (categoría Heráldica)
+
+Las figuras de la categoría «Heráldica» son adaptaciones de iconos de
+[game-icons.net](https://game-icons.net/), publicados bajo
+[CC BY 3.0](https://creativecommons.org/licenses/by/3.0/). Cambios: fondo
+eliminado, color `currentColor` y escala a 64×64. Cada SVG y su tarjeta de la
+galería indican el autor y el icono original (también en el campo `credit` de
+`catalog.json`). Quien use estas figuras debe mencionar a su autor original
+además de a Lannita Codes.
+
+Autores incluidos: Lorc, Delapouite, Caro Asercion y Cathelineau.

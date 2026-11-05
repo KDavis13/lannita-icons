@@ -18,6 +18,10 @@ for file,digest in json.loads((ROOT/'scripts/pilot-sha256.json').read_text()).it
 styles={i['name']: i.get('styles',['outline','heraldic']) for i in catalog}
 assert all(s and set(s)<={'outline','heraldic'} for s in styles.values())
 assert all(len(styles[n])==2 for n in core), 'Core icons keep both styles'
+for i in catalog:
+ if 'credit' in i:
+  c=i['credit']; assert c['url'].startswith('https://') and c['author'] and c['license'], i['name']
+  assert c['author'] in (ROOT/'icons/heraldic'/(i['name']+'.svg')).read_text(), i['name']
 V=sum(len(s) for s in styles.values())
 for style in ('outline', 'heraldic'):
  paths=list((ROOT/'icons'/style).glob('*.svg'))

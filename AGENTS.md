@@ -43,3 +43,6 @@ Revisión de cuervos: `raven` y `flying-raven` redibujados en ambos estilos a pe
 - Categoría «Heráldica»: figuras genéricas inspiradas en blasones (sin copiar emblemas de casas concretas).
   Una sola versión por figura (la que mejor funcione, normalmente la sólida en `icons/heraldic/`),
   declarada en `catalog.json` con `"styles": ["heraldic"]` y `"minSize": 32`. Trazo más fino y más detalle.
+- Las figuras de Heráldica se adaptan de game-icons.net (CC BY 3.0; nunca CC BY-SA ni NC): quitar el fondo,
+  usar `currentColor`, envolver en `scale(.125)` a 64×64, poner autor y URL en el comentario del SVG y en
+  `credit` de `catalog.json`. No copiar emblemas concretos de casas (combinaciones o motivos exclusivos).
