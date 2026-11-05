@@ -693,5 +693,410 @@
       "url": "https://github.com/game-icons/icons/blob/master/lorc/moon.svg",
       "license": "CC BY 3.0"
     }
+  },
+  {
+    "name": "horse",
+    "label": "Caballo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "horse-head",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/horse-head.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "bull",
+    "label": "Toro",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "charging-bull",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/charging-bull.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "ram",
+    "label": "Carnero",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "ram-profile",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/ram-profile.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "swan",
+    "label": "Cisne",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "swan",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/swan.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "hound",
+    "label": "Lebrel",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "hound",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/hound.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "fox",
+    "label": "Zorro",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Caro Asercion",
+      "title": "fox",
+      "url": "https://github.com/game-icons/icons/blob/master/caro-asercion/fox.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "heron",
+    "label": "Garza",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Caro Asercion",
+      "title": "heron",
+      "url": "https://github.com/game-icons/icons/blob/master/caro-asercion/heron.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "rooster",
+    "label": "Gallo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "rooster",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/rooster.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "bat",
+    "label": "Murciélago",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "bat",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/bat.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "scorpion",
+    "label": "Escorpión",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "scorpion",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/scorpion.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "crab",
+    "label": "Cangrejo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "crab",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/crab.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "seahorse",
+    "label": "Caballito de mar",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "seahorse",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/seahorse.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "mermaid",
+    "label": "Sirena",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "mermaid",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/mermaid.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "oak",
+    "label": "Roble",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "oak",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/oak.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "oak-leaf",
+    "label": "Hoja de roble",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "oak-leaf",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/oak-leaf.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "acorn",
+    "label": "Bellota",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "acorn",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/acorn.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "pine",
+    "label": "Pino",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "pine-tree",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/pine-tree.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "apple",
+    "label": "Manzana",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "shiny-apple",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/shiny-apple.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "grapes",
+    "label": "Uvas",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "grapes",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/grapes.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "sun",
+    "label": "Sol",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "sun",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/sun.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "star",
+    "label": "Estrella",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "seven-pointed-star",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/seven-pointed-star.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "crowned-skull",
+    "label": "Calavera coronada",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "crowned-skull",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/crowned-skull.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "mailed-fist",
+    "label": "Puño acorazado",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "mailed-fist",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/mailed-fist.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "crossed-axes",
+    "label": "Hachas cruzadas",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "crossed-axes",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/crossed-axes.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "war-horn",
+    "label": "Cuerno de guerra",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "hunting-horn",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/hunting-horn.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "scythe",
+    "label": "Guadaña",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "scythe",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/scythe.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "anchor",
+    "label": "Ancla",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "anchor",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/anchor.svg",
+      "license": "CC BY 3.0"
+    }
   }
 ]
