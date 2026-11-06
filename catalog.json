@@ -749,21 +749,6 @@
     }
   },
   {
-    "name": "hound",
-    "label": "Lebrel",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "hound",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/hound.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
     "name": "fox",
     "label": "Zorro",
     "category": "Heráldica",
@@ -809,21 +794,6 @@
     }
   },
   {
-    "name": "bat",
-    "label": "Murciélago",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Delapouite",
-      "title": "bat",
-      "url": "https://github.com/game-icons/icons/blob/master/delapouite/bat.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
     "name": "scorpion",
     "label": "Escorpión",
     "category": "Heráldica",
@@ -839,21 +809,6 @@
     }
   },
   {
-    "name": "crab",
-    "label": "Cangrejo",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "crab",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/crab.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
     "name": "seahorse",
     "label": "Caballito de mar",
     "category": "Heráldica",
@@ -865,21 +820,6 @@
       "author": "Delapouite",
       "title": "seahorse",
       "url": "https://github.com/game-icons/icons/blob/master/delapouite/seahorse.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
-    "name": "mermaid",
-    "label": "Sirena",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Delapouite",
-      "title": "mermaid",
-      "url": "https://github.com/game-icons/icons/blob/master/delapouite/mermaid.svg",
       "license": "CC BY 3.0"
     }
   },
@@ -925,51 +865,6 @@
       "author": "Lorc",
       "title": "acorn",
       "url": "https://github.com/game-icons/icons/blob/master/lorc/acorn.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
-    "name": "pine",
-    "label": "Pino",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "pine-tree",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/pine-tree.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
-    "name": "apple",
-    "label": "Manzana",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "shiny-apple",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/shiny-apple.svg",
-      "license": "CC BY 3.0"
-    }
-  },
-  {
-    "name": "grapes",
-    "label": "Uvas",
-    "category": "Heráldica",
-    "styles": [
-      "heraldic"
-    ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "grapes",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/grapes.svg",
       "license": "CC BY 3.0"
     }
   },
