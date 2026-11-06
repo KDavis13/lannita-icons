@@ -37,7 +37,7 @@ Autores incluidos: Lorc, Delapouite, Caro Asercion y Cathelineau.
 Excepciones:
 
 - Las bestias heráldicas de **SZSquirrel** (león rampante, lobo pasante,
-  leopardo, merlette, pegaso, delfín, cabra rampante y ardilla) parten de dibujos
+  leopardo, merlette, pegaso, cabra rampante y ardilla) parten de dibujos
   publicados en Openclipart como **dominio público**. Se han simplificado a
   silueta maciza de una sola tinta; el lobo se ha adaptado a partir de su zorro
   pasante, con la cola redibujada.

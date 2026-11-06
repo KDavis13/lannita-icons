@@ -46,7 +46,32 @@
   },
   {
     "name": "dice",
-    "label": "Dados",
+    "label": "Dado d6",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "dice-four",
+    "label": "Dado d4",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "dice-eight",
+    "label": "Dado d8",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "dice-ten",
+    "label": "Dado d10",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "dice-twelve",
+    "label": "Dado d12",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "dice-twenty",
+    "label": "Dado d20",
     "category": "Personajes y sistemas de rol"
   },
   {
@@ -100,6 +125,16 @@
     "category": "Guerra y combate"
   },
   {
+    "name": "war-hammer",
+    "label": "Martillo de guerra",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "flail",
+    "label": "Mangual",
+    "category": "Guerra y combate"
+  },
+  {
     "name": "fortress-gate",
     "label": "Puertas de fortaleza",
     "category": "Guerra y combate"
@@ -145,6 +180,26 @@
     "category": "Economía y territorios"
   },
   {
+    "name": "gem",
+    "label": "Gema",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "ring",
+    "label": "Anillo",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "amulet",
+    "label": "Amuleto",
+    "category": "Economía y territorios"
+  },
+  {
+    "name": "necklace",
+    "label": "Collar",
+    "category": "Economía y territorios"
+  },
+  {
     "name": "coin-pouch",
     "label": "Saco de monedas",
     "category": "Economía y territorios"
@@ -187,6 +242,26 @@
   {
     "name": "potion",
     "label": "Poción",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "potion-health",
+    "label": "Poción de curación",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "potion-mana",
+    "label": "Poción de maná",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "potion-poison",
+    "label": "Veneno",
+    "category": "Personajes y sistemas de rol"
+  },
+  {
+    "name": "potion-elixir",
+    "label": "Elixir",
     "category": "Personajes y sistemas de rol"
   },
   {
@@ -247,6 +322,11 @@
   {
     "name": "broken-lance",
     "label": "Lanza rota de torneo",
+    "category": "Guerra y combate"
+  },
+  {
+    "name": "tournament-lance",
+    "label": "Lanza de torneo",
     "category": "Guerra y combate"
   },
   {
@@ -1087,10 +1167,10 @@
     ],
     "minSize": 32,
     "credit": {
-      "author": "SZSquirrel",
-      "title": "dolphin naiant",
-      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-dolphin-naiant.svg",
-      "license": "Dominio público"
+      "author": "Delapouite",
+      "title": "dolphin",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/dolphin.svg",
+      "license": "CC BY 3.0"
     }
   },
   {
