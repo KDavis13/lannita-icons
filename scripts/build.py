@@ -5,7 +5,7 @@ import json
 import re
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = 'https://kdavis13.github.io/lannita-icons/'
+SITE = 'https://icons.lannitacodes.es/'
 REPO = 'https://github.com/KDavis13/lannita-icons'
 CATALOG = json.loads((ROOT/'catalog.json').read_text())
 ICONS = [(i['name'], i['label'], i['category']) for i in CATALOG]

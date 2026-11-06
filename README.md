@@ -3,7 +3,7 @@
 Colección gratuita de símbolos para foros de rol medieval y fantasía, con
 variantes `outline` y `heraldic`. Catálogo completo en `catalog.json`.
 
-**Galería:** https://kdavis13.github.io/lannita-icons/
+**Galería:** https://icons.lannitacodes.es/
 SVG editables, `viewBox="0 0 64 64"`, color mediante `currentColor`.
 Los recortes heráldicos son transparentes y funcionan sobre cualquier fondo.
 
