@@ -36,7 +36,7 @@ def head(title, description, extra=''):
 
 
 FOOTER = f'''<footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a>. Iconos bajo CC BY 4.0, con mención obligatoria.</p></div>
-<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a><a href="{REPO}">Código en GitHub</a></nav></footer>'''
+<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a></nav></footer>'''
 
 # ---------------------------------------------------------------- gallery
 cards = {c: [] for c in CATEGORIES}
