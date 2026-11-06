@@ -471,32 +471,32 @@
   },
   {
     "name": "lion",
-    "label": "León",
+    "label": "León rampante",
     "category": "Heráldica",
     "styles": [
       "heraldic"
     ],
     "minSize": 32,
     "credit": {
-      "author": "Lorc",
-      "title": "lion",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/lion.svg",
-      "license": "CC BY 3.0"
+      "author": "SZSquirrel",
+      "title": "lion rampant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-lion-rampant.svg",
+      "license": "Dominio público"
     }
   },
   {
     "name": "wolf",
-    "label": "Lobo",
+    "label": "Lobo pasante",
     "category": "Heráldica",
     "styles": [
       "heraldic"
     ],
     "minSize": 32,
     "credit": {
-      "author": "Lorc",
-      "title": "wolf-head",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/wolf-head.svg",
-      "license": "CC BY 3.0"
+      "author": "SZSquirrel",
+      "title": "fox passant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-fox-passant.svg",
+      "license": "Dominio público"
     }
   },
   {
@@ -591,18 +591,12 @@
   },
   {
     "name": "rose",
-    "label": "Rosa",
+    "label": "Rosa heráldica",
     "category": "Heráldica",
     "styles": [
       "heraldic"
     ],
-    "minSize": 32,
-    "credit": {
-      "author": "Lorc",
-      "title": "rose",
-      "url": "https://github.com/game-icons/icons/blob/master/lorc/rose.svg",
-      "license": "CC BY 3.0"
-    }
+    "minSize": 32
   },
   {
     "name": "boar",

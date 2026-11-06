@@ -33,3 +33,8 @@ galería indican el autor y el icono original (también en el campo `credit` de
 además de a Lannita Codes.
 
 Autores incluidos: Lorc, Delapouite, Caro Asercion y Cathelineau.
+
+Excepciones: el **león rampante** y el **lobo pasante** parten de dibujos
+heráldicos de SZSquirrel publicados en Openclipart como **dominio público**
+(el lobo se ha adaptado a partir de su zorro pasante, redibujando la cola). Se han
+vectorizado a una sola tinta. La **rosa heráldica** es de diseño propio.
