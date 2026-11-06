@@ -34,7 +34,12 @@ además de a Lannita Codes.
 
 Autores incluidos: Lorc, Delapouite, Caro Asercion y Cathelineau.
 
-Excepciones: el **león rampante** y el **lobo pasante** parten de dibujos
-heráldicos de SZSquirrel publicados en Openclipart como **dominio público**
-(el lobo se ha adaptado a partir de su zorro pasante, redibujando la cola). Se han
-simplificado a silueta maciza de una sola tinta. La **rosa heráldica** es de diseño propio.
+Excepciones:
+
+- Las bestias heráldicas de **SZSquirrel** (león rampante, lobo pasante,
+  leopardo, merlette, pegaso, delfín, cabra rampante y ardilla) parten de dibujos
+  publicados en Openclipart como **dominio público**. Se han simplificado a
+  silueta maciza de una sola tinta; el lobo se ha adaptado a partir de su zorro
+  pasante, con la cola redibujada.
+- La **rosa heráldica**, la **cruz patada**, la **cruz de Malta**, la **cruz
+  trebolada** y la **estrella de seis puntas** son de diseño propio.

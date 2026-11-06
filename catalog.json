@@ -1092,5 +1092,176 @@
       "url": "https://github.com/game-icons/icons/blob/master/lorc/anchor.svg",
       "license": "CC BY 3.0"
     }
+  },
+  {
+    "name": "fleur-de-lis",
+    "label": "Flor de lis",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "fleur-de-lys",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/fleur-de-lys.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "lightning",
+    "label": "Rayo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Lorc",
+      "title": "focused-lightning",
+      "url": "https://github.com/game-icons/icons/blob/master/lorc/focused-lightning.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "jerusalem-cross",
+    "label": "Cruz de Jerusalén",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "Delapouite",
+      "title": "jerusalem-cross",
+      "url": "https://github.com/game-icons/icons/blob/master/delapouite/jerusalem-cross.svg",
+      "license": "CC BY 3.0"
+    }
+  },
+  {
+    "name": "leopard",
+    "label": "Leopardo",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "leopard passant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-leopard-passant.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "martlet",
+    "label": "Merlette",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "martlet volant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-martlet-volant.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "pegasus",
+    "label": "Pegaso",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "pegasus passant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-pegasus-passant.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "dolphin",
+    "label": "Delfín",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "dolphin naiant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-dolphin-naiant.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "goat",
+    "label": "Cabra rampante",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "goat rampant",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-goat-rampant.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "squirrel",
+    "label": "Ardilla",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32,
+    "credit": {
+      "author": "SZSquirrel",
+      "title": "squirrel sejant erect",
+      "url": "https://github.com/ikks/openclipartcollection/blob/main/s/szquirrel-squirrel-sejant-erect.svg",
+      "license": "Dominio público"
+    }
+  },
+  {
+    "name": "cross-patee",
+    "label": "Cruz patada",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
+  },
+  {
+    "name": "maltese-cross",
+    "label": "Cruz de Malta",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
+  },
+  {
+    "name": "cross-botonny",
+    "label": "Cruz trebolada",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
+  },
+  {
+    "name": "six-star",
+    "label": "Estrella de seis puntas",
+    "category": "Heráldica",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
   }
 ]
