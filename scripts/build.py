@@ -32,11 +32,11 @@ def head(title, description, extra=''):
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title><meta name="description" content="{description}"><meta name="theme-color" content="#141416">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Lannita Icons"><meta property="og:title" content="{title}"><meta property="og:description" content="{description}"><meta property="og:image" content="{SITE}assets/brand/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"><link rel="stylesheet" href="./css/gallery.css">{extra}</head>'''
+<link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"><link rel="stylesheet" href="./css/gallery.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2962614481860647" crossorigin="anonymous"></script>{extra}</head>'''
 
 
 FOOTER = f'''<footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a>. Iconos bajo CC BY 4.0, con mención obligatoria.</p></div>
-<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a></nav></footer>'''
+<nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a><a href="https://ko-fi.com/lannitacodes" rel="noopener">Invítame a un café</a><a href="./privacidad.html">Privacidad y cookies</a></nav></footer>'''
 
 # ---------------------------------------------------------------- gallery
 cards = {c: [] for c in CATEGORIES}
@@ -160,9 +160,24 @@ guide = head('Lannita Icons · Cómo usarlos', 'Guía para usar los iconos de La
 </main>{FOOTER}</body></html>'''
 (ROOT/'guia.html').write_text(guide)
 
+
+# ---------------------------------------------------------------- privacy
+privacy = head('Lannita Icons · Privacidad y cookies', 'Información sobre privacidad, cookies y publicidad de Lannita Icons.') + f'''
+<body class="compare"><header class="page-header"><a class="brand-link" href="./index.html"><img src="./assets/brand/lannita-logo.svg" alt="Lannita Icons" width="460" height="140"></a><a class="back" href="./index.html">← Volver a la galería</a></header>
+<div class="intro"><h1>Privacidad y cookies</h1>
+<p><strong>Responsable:</strong> Lannita Codes (<a href="https://lannitacodes.tumblr.com/">lannitacodes.tumblr.com</a>). Puedes contactar por ese medio para cualquier consulta sobre tus datos.</p>
+<p><strong>Qué datos recoge esta web:</strong> la propia web no tiene registro, formularios ni cuentas, y no guarda datos personales por su cuenta. Los iconos se copian o descargan en tu navegador.</p>
+<p><strong>Publicidad:</strong> esta web muestra anuncios de Google AdSense. Google y sus socios pueden usar cookies o identificadores similares para mostrar anuncios y medir su rendimiento, y en el Espacio Económico Europeo solo lo hacen si das tu consentimiento en el aviso que aparece al entrar. Puedes cambiar tu elección en cualquier momento desde ese aviso o en la configuración de tu navegador. Más información en la <a href="https://policies.google.com/technologies/partner-sites">política de Google sobre cómo usa los datos de sitios que usan sus servicios</a> y en <a href="https://adssettings.google.com/">la configuración de anuncios de Google</a>.</p>
+<p><strong>Alojamiento:</strong> la web se sirve desde GitHub Pages, que puede registrar datos técnicos de la conexión (como la dirección IP) según su <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaración de privacidad</a>.</p>
+<p><strong>Enlace de donación:</strong> el botón «Invítame a un café» lleva a Ko-fi, un servicio externo con su propia política de privacidad.</p>
+<p><strong>Tus derechos:</strong> puedes pedir acceso, rectificación o supresión de tus datos, y reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p></div>
+{FOOTER}</body></html>'''
+(ROOT/'privacidad.html').write_text(privacy)
+
 # ---------------------------------------------------------------- 404
 page404 = head('Lannita Icons · Página no encontrada', 'Esta página no existe.') + f'''
 <body class="notfound"><main><img src="./assets/brand/lannita-mark.svg" alt="" width="96" height="96"><h1>Esta senda no lleva a ninguna parte.</h1>
 <p>La página que buscas no existe o ha cambiado de sitio.</p><a class="button" href="./index.html">Volver a la galería</a></main></body></html>'''
 # GitHub Pages serves 404.html from any missing path, so its links must be absolute.
+page404 = re.sub(r'<script async src="https://pagead2[^>]*></script>', '', page404)  # no ads on the error page
 (ROOT/'404.html').write_text(page404.replace('"./', f'"{SITE}'))
