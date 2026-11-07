@@ -1238,5 +1238,20 @@
       "heraldic"
     ],
     "minSize": 32
+  },
+  {
+    "name": "braces",
+    "label": "Llaves",
+    "category": "Marca Lannita"
+  },
+  {
+    "name": "lannita-codes",
+    "label": "Lannita Codes",
+    "category": "Marca Lannita"
+  },
+  {
+    "name": "lannita-icons",
+    "label": "Lannita Icons",
+    "category": "Marca Lannita"
   }
 ]
