@@ -1256,6 +1256,10 @@
   {
     "name": "lannita-icons",
     "label": "Lannita Icons",
-    "category": "Marca Lannita"
+    "category": "Marca Lannita",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 24
   }
 ]
