@@ -1247,7 +1247,11 @@
   {
     "name": "lannita-codes",
     "label": "Lannita Codes",
-    "category": "Marca Lannita"
+    "category": "Marca Lannita",
+    "styles": [
+      "heraldic"
+    ],
+    "minSize": 32
   },
   {
     "name": "lannita-icons",
