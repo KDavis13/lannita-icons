@@ -23,7 +23,7 @@
 - Identidad visual en `assets/brand/`: logo horizontal, símbolo y favicon. Son
   recursos de marca separados del catálogo de iconos. Se permiten los colores
   de marca fijos y texto con fuentes del sistema en el logo. Mantener la cabecera
-  accesible y el favicon enlazado con rutas relativas para GitHub Pages.
+  accesible y el favicon enlazado con rutas relativas.
 
 - `catalog.json` define nombres, etiquetas y categorías. `comparison.html`, `guia.html` y `404.html`
   son generados. La galería agrupa por categoría en el orden del catálogo y marca como

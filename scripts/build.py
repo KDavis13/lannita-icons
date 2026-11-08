@@ -6,7 +6,6 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://icons.lannitacodes.es/'
-REPO = 'https://github.com/KDavis13/lannita-icons'
 CATALOG = json.loads((ROOT/'catalog.json').read_text())
 ICONS = [(i['name'], i['label'], i['category']) for i in CATALOG]
 # Most icons ship two styles; heraldic figures ship only the one that reads best,
@@ -114,7 +113,7 @@ comparison = head('Lannita Icons · Comparativa de tamaños', f'Los {V} SVG de L
 (ROOT/'comparison.html').write_text(comparison)
 
 # ---------------------------------------------------------------- guide
-CDN = 'https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@main/css/lannita-icons.css'
+CSS_URL = 'https://icons.lannitacodes.es/css/lannita-icons.css'
 def code(text):
     return f'<pre><code>{escape(text)}</code></pre>'
 demo = ''.join(f'<span class="li {"li-heraldic " if k % 2 else ""}li-{n}" aria-hidden="true"></span>' for k, n in enumerate(['crown', 'swords', 'raven', 'castle', 'jouster-right', 'potion']))
@@ -128,9 +127,10 @@ guide = head('Lannita Icons · Cómo usarlos', 'Guía para usar los iconos de La
 <p>Cargas una sola hoja de estilos y después escribes los iconos con una etiqueta corta. Toman el color del texto que los rodea, así que combinan con cualquier tema.</p>
 <h3>Paso 1 · Carga la hoja una vez</h3>
 <p>Pega esta línea <strong>al principio</strong> de la hoja CSS de tu foro (en Foroactivo, en el panel de administración, dentro de Visualización, en la hoja de estilo CSS):</p>
-{code(f'@import url("{CDN}");')}
+{code(f'@import url("{CSS_URL}");')}
 <p>Si tu plantilla admite etiquetas en el <code>&lt;head&gt;</code>, también puedes usar:</p>
-{code(f'<link rel="stylesheet" href="{CDN}">')}
+{code(f'<link rel="stylesheet" href="{CSS_URL}">')}
+<p class="note"><strong>¿Usabas el enlace de jsDelivr?</strong> Si en alguna publicación antigua de Lannita Codes viste una dirección que empieza por <code>cdn.jsdelivr.net</code>, carga la misma hoja de estilos. Cámbiala por la de arriba (<code>icons.lannitacodes.es</code>): es la dirección oficial y es la que mantendré.</p>
 <h3>Paso 2 · Escribe el icono</h3>
 <p>En la galería, pulsa <strong>Clase</strong> en el icono que quieras y pégalo donde se acepte HTML:</p>
 {code('<span class="li li-crown"></span> Administración' + chr(10) + '<span class="li li-heraldic li-crown"></span> Nobleza')}
@@ -154,7 +154,7 @@ guide = head('Lannita Icons · Cómo usarlos', 'Guía para usar los iconos de La
 <section id="consejos" class="step"><h2>Consejos</h2><ul>
 <li><strong>Accesibilidad.</strong> Acompaña el icono de texto visible. Si va solo y significa algo, añade una etiqueta: <code>&lt;span class="li li-key" role="img" aria-label="Llave"&gt;&lt;/span&gt;</code>.</li>
 <li><strong>Tamaño.</strong> Los iconos se leen bien desde 24 px; los ornamentales y los de dos figuras lucen más a 32 px o más.</li>
-<li><strong>Versión fija.</strong> El enlace con <code>@main</code> siempre trae la última versión. Si prefieres que tu foro no cambie nunca, pídenos una versión etiquetada.</li>
+<li><strong>Actualizaciones.</strong> El enlace siempre trae la última versión de la hoja de estilos. Si prefieres que tu foro no cambie nunca, descarga los SVG y la hoja y alójalos tú.</li>
 <li><strong>Licencia.</strong> Iconos bajo CC BY 4.0: puedes usarlos y adaptarlos siempre que incluyas la <a href="#mencion">mención a Lannita Codes</a>.</li>
 </ul></section>
 </main>{FOOTER}</body></html>'''
@@ -168,7 +168,7 @@ privacy = head('Lannita Icons · Privacidad y cookies', 'Información sobre priv
 <p><strong>Responsable:</strong> Lannita Codes (<a href="https://lannitacodes.tumblr.com/">lannitacodes.tumblr.com</a>). Puedes contactar por ese medio para cualquier consulta sobre tus datos.</p>
 <p><strong>Qué datos recoge esta web:</strong> la propia web no tiene registro, formularios ni cuentas, y no guarda datos personales por su cuenta. Los iconos se copian o descargan en tu navegador.</p>
 <p><strong>Publicidad:</strong> esta web muestra anuncios de Google AdSense. Google y sus socios pueden usar cookies o identificadores similares para mostrar anuncios y medir su rendimiento, y en el Espacio Económico Europeo solo lo hacen si das tu consentimiento en el aviso que aparece al entrar. Puedes cambiar tu elección en cualquier momento desde ese aviso o en la configuración de tu navegador. Más información en la <a href="https://policies.google.com/technologies/partner-sites">política de Google sobre cómo usa los datos de sitios que usan sus servicios</a> y en <a href="https://adssettings.google.com/">la configuración de anuncios de Google</a>.</p>
-<p><strong>Alojamiento:</strong> la web se sirve desde GitHub Pages, que puede registrar datos técnicos de la conexión (como la dirección IP) según su <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">declaración de privacidad</a>.</p>
+<p><strong>Alojamiento:</strong> la web se sirve desde un servicio de alojamiento estático, que puede registrar datos técnicos de la conexión (como la dirección IP).</p>
 <p><strong>Enlace de donación:</strong> el botón «Invítame a un café» lleva a Ko-fi, un servicio externo con su propia política de privacidad.</p>
 <p><strong>Tus derechos:</strong> puedes pedir acceso, rectificación o supresión de tus datos, y reclamar ante la Agencia Española de Protección de Datos (aepd.es).</p></div>
 {FOOTER}</body></html>'''
@@ -178,6 +178,6 @@ privacy = head('Lannita Icons · Privacidad y cookies', 'Información sobre priv
 page404 = head('Lannita Icons · Página no encontrada', 'Esta página no existe.') + f'''
 <body class="notfound"><main><img src="./assets/brand/lannita-mark.svg" alt="" width="96" height="96"><h1>Esta senda no lleva a ninguna parte.</h1>
 <p>La página que buscas no existe o ha cambiado de sitio.</p><a class="button" href="./index.html">Volver a la galería</a></main></body></html>'''
-# GitHub Pages serves 404.html from any missing path, so its links must be absolute.
+# The static host serves 404.html from any missing path, so its links must be absolute.
 page404 = re.sub(r'<script async src="https://pagead2[^>]*></script>', '', page404)  # no ads on the error page
 (ROOT/'404.html').write_text(page404.replace('"./', f'"{SITE}'))

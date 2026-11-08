@@ -61,20 +61,16 @@ python3 scripts/build.py
 python3 scripts/check.py
 ```
 
-## Publicar en GitHub y jsDelivr
+## Uso en foros
 
-El repositorio es público en https://github.com/KDavis13/lannita-icons y la
-galería se publica automáticamente en GitHub Pages al subir cambios a `main`.
-Para usar la hoja en un foro, crea una etiqueta de versión (por ejemplo `v0.1.0`)
-y enlaza:
+La galería se publica en https://icons.lannitacodes.es/. Para usar la hoja en un foro, enlaza:
 
 ```text
-https://cdn.jsdelivr.net/gh/KDavis13/lannita-icons@v0.1.0/css/lannita-icons.css
+https://icons.lannitacodes.es/css/lannita-icons.css
 ```
 
-Para un SVG: `...@v0.1.0/icons/heraldic/crown.svg`. Mantén la estructura de
-carpetas para que funcionen las rutas relativas del CSS. Fija una versión para
-que una actualización no cambie el aspecto del foro de forma inesperada.
+Para un SVG: `https://icons.lannitacodes.es/icons/heraldic/crown.svg`. Mantén la estructura de
+carpetas para que funcionen las rutas relativas del CSS.
 
 ## Licencia
 
@@ -86,7 +82,7 @@ que una actualización no cambie el aspecto del foro de forma inesperada.
 Los SVG proceden del piloto entregado como diseños originales;
 no se ha realizado una auditoría independiente de su autoría.
 
-## Identidad visual y GitHub Pages
+## Identidad visual y publicación
 
 `assets/brand/lannita-logo.svg` es el logo horizontal de la cabecera;
 `lannita-mark.svg` es el símbolo independiente y `favicon.svg` el icono de pestaña.
@@ -97,11 +93,10 @@ la galería. El texto usa tipografía sans serif del sistema sin descargar fuent
 Los colores de marca son independientes del selector de color del catálogo.
 Estos archivos de marca no añaden iconos al catálogo.
 
-Para GitHub Pages, publica la raíz del repositorio desde la rama elegida en
-Settings → Pages. `index.html` es el punto de entrada; `.nojekyll` permite servir
-los archivos estáticos directamente. No hace falta Node ni ejecutar un build en
-Pages: los archivos generados ya están incluidos. Todas las rutas son relativas,
-también las del logo y favicon, para funcionar bajo `/nombre-del-repositorio/`.
+Para publicar, sirve la raíz del repositorio como sitio estático. `index.html` es el punto de entrada;
+`.nojekyll` permite servir los archivos tal cual. No hace falta Node ni ejecutar un build: los archivos
+generados ya están incluidos. Todas las rutas son relativas, también las del logo y favicon, para
+funcionar bajo cualquier subdirectorio.
 
 ### Referencia visual oficial
 
