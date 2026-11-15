@@ -34,7 +34,7 @@ def head(title, description, extra=''):
 <link rel="icon" type="image/svg+xml" href="./assets/brand/favicon.svg"><link rel="stylesheet" href="./css/gallery.css"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2962614481860647" crossorigin="anonymous"></script>{extra}</head>'''
 
 
-FOOTER = f'''<footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a>. Iconos bajo CC BY 4.0, con mención obligatoria.</p></div>
+FOOTER = f'''<footer class="site-footer"><div><img src="./assets/brand/lannita-mark.svg" alt="" width="36" height="36"><p>Lannita Icons es una colección gratuita de <a href="https://lannitacodes.tumblr.com/">Lannita Codes</a>. Iconos bajo CC BY 4.0, con mención obligatoria.</p><p>Las figuras de Heráldica son adaptaciones de <a href="https://game-icons.net/">game-icons.net</a> (Lorc, Delapouite, Caro Asercion y Cathelineau, CC BY 3.0); cada tarjeta indica su autor. <a href="./guia.html#mencion">Más sobre las menciones</a>.</p></div>
 <nav aria-label="Enlaces del pie"><a href="./index.html">Galería</a><a href="./guia.html">Cómo usarlos</a><a href="./comparison.html">Comparativa de tamaños</a><a href="https://ko-fi.com/lannitacodes" rel="noopener">Invítame a un café</a><a href="./privacidad.html">Privacidad y cookies</a></nav></footer>'''
 
 # ---------------------------------------------------------------- gallery
